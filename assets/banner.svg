@@ -1,52 +1,89 @@
-<svg width="1600" height="420" viewBox="0 0 1600 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="FreeCoder MediKit">
+<svg width="1600" height="440" viewBox="0 0 1600 440" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="FreeCoder MediKit">
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#070b16"/>
-      <stop offset="0.55" stop-color="#0d1426"/>
-      <stop offset="1" stop-color="#111a33"/>
+      <stop offset="0" stop-color="#050810"/>
+      <stop offset="0.5" stop-color="#0a1020"/>
+      <stop offset="1" stop-color="#0d1730"/>
     </linearGradient>
-    <radialGradient id="glow1" cx="0.12" cy="0.18" r="0.55">
-      <stop offset="0" stop-color="#22d3ee" stop-opacity="0.38"/>
+    <radialGradient id="aur1" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#22d3ee" stop-opacity="0.55"/>
       <stop offset="1" stop-color="#22d3ee" stop-opacity="0"/>
     </radialGradient>
-    <radialGradient id="glow2" cx="0.88" cy="0.85" r="0.55">
-      <stop offset="0" stop-color="#8b5cf6" stop-opacity="0.38"/>
+    <radialGradient id="aur2" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#8b5cf6" stop-opacity="0.5"/>
       <stop offset="1" stop-color="#8b5cf6" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="aur3" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#ec4899" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#ec4899" stop-opacity="0"/>
     </radialGradient>
     <linearGradient id="title" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0" stop-color="#67e8f9"/>
-      <stop offset="0.5" stop-color="#a78bfa"/>
-      <stop offset="1" stop-color="#f0abfc"/>
+      <stop offset="0.4" stop-color="#a78bfa"/>
+      <stop offset="0.75" stop-color="#f0abfc"/>
+      <stop offset="1" stop-color="#67e8f9"/>
+      <animate attributeName="x1" values="-0.3;1;1.3;0.3;-0.3" dur="9s" repeatCount="indefinite"/>
+      <animate attributeName="x2" values="0.7;2;2.3;1.3;0.7" dur="9s" repeatCount="indefinite"/>
     </linearGradient>
-    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-      <path d="M40 0H0V40" fill="none" stroke="#ffffff" stroke-opacity="0.045"/>
+    <linearGradient id="line" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#22d3ee" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#a78bfa" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#22d3ee" stop-opacity="0"/>
+    </linearGradient>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M48 0H0V48" fill="none" stroke="#ffffff" stroke-opacity="0.05"/>
     </pattern>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="8" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="soft" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
   </defs>
-  <rect width="1600" height="420" fill="url(#bg)"/>
-  <rect width="1600" height="420" fill="url(#grid)"/>
-  <rect width="1600" height="420" fill="url(#glow1)"/>
-  <rect width="1600" height="420" fill="url(#glow2)"/>
-  <g transform="translate(1290 120)" opacity="0.9">
-    <rect x="0" y="0" width="180" height="180" rx="34" fill="none" stroke="#22d3ee" stroke-opacity="0.55" stroke-width="3"/>
-    <rect x="74" y="24" width="32" height="132" rx="10" fill="#22d3ee" fill-opacity="0.9"/>
-    <rect x="24" y="74" width="132" height="32" rx="10" fill="#22d3ee" fill-opacity="0.9"/>
-    <circle cx="0" cy="0" r="5" fill="#a78bfa"/>
-    <circle cx="180" cy="0" r="5" fill="#a78bfa"/>
-    <circle cx="0" cy="180" r="5" fill="#a78bfa"/>
-    <circle cx="180" cy="180" r="5" fill="#a78bfa"/>
-    <path d="M-40 40 H-18 M-40 140 H-18 M198 40 H220 M198 140 H220" stroke="#a78bfa" stroke-opacity="0.55" stroke-width="3"/>
+  <style>
+    .float { animation: float 12s ease-in-out infinite; }
+    .float2 { animation: float 15s ease-in-out infinite; }
+    .float3 { animation: float 18s ease-in-out infinite; }
+    @keyframes float { 0%,100% { transform: translateY(0px); } 50% { transform: translateY(-14px); } }
+    .pulse { animation: pulse 3.2s ease-in-out infinite; }
+    @keyframes pulse { 0%,100% { opacity: .55; } 50% { opacity: 1; } }
+  </style>
+  <rect width="1600" height="440" fill="url(#bg)"/>
+  <rect width="1600" height="440" fill="url(#grid)"/>
+  <g class="float"><circle cx="240" cy="90" r="240" fill="url(#aur1)"/></g>
+  <g class="float2"><circle cx="1380" cy="360" r="300" fill="url(#aur2)"/></g>
+  <g class="float3"><circle cx="900" cy="40" r="220" fill="url(#aur3)"/></g>
+  <g fill="#a5f3fc">
+    <circle cx="180" cy="330" r="2.5" opacity="0.7"><animate attributeName="cy" values="330;300;330" dur="7s" repeatCount="indefinite"/></circle>
+    <circle cx="420" cy="120" r="2" opacity="0.6"><animate attributeName="cy" values="120;90;120" dur="9s" repeatCount="indefinite"/></circle>
+    <circle cx="760" cy="380" r="2.5" opacity="0.6"><animate attributeName="cy" values="380;350;380" dur="8s" repeatCount="indefinite"/></circle>
+    <circle cx="1050" cy="90" r="2" opacity="0.5"><animate attributeName="cy" values="90;60;90" dur="10s" repeatCount="indefinite"/></circle>
+    <circle cx="1240" cy="300" r="2.5" opacity="0.6"><animate attributeName="cy" values="300;270;300" dur="6.5s" repeatCount="indefinite"/></circle>
   </g>
-  <text x="120" y="176" font-family="'Inter','SF Pro Display','Segoe UI',system-ui,Arial,sans-serif" font-size="78" font-weight="800" fill="url(#title)">FreeCoder MediKit</text>
-  <text x="124" y="228" font-family="'Inter','SF Pro Display','Segoe UI',system-ui,Arial,sans-serif" font-size="27" font-weight="500" fill="#94a3b8">A curated, reproducible AI toolkit — LLM gateway · local router · opencode</text>
+  <g transform="translate(1300 120)" filter="url(#glow)">
+    <rect x="0" y="0" width="180" height="180" rx="36" fill="#0b1220" fill-opacity="0.5" stroke="#22d3ee" stroke-opacity="0.6" stroke-width="3"/>
+    <rect x="74" y="24" width="32" height="132" rx="10" fill="#22d3ee"/>
+    <rect x="24" y="74" width="132" height="32" rx="10" fill="#22d3ee"/>
+    <g class="pulse">
+      <circle cx="0" cy="0" r="6" fill="#a78bfa"/><circle cx="180" cy="0" r="6" fill="#a78bfa"/>
+      <circle cx="0" cy="180" r="6" fill="#a78bfa"/><circle cx="180" cy="180" r="6" fill="#a78bfa"/>
+    </g>
+    <path d="M-46 40 H-18 M-46 140 H-18 M198 40 H226 M198 140 H226" stroke="#a78bfa" stroke-opacity="0.6" stroke-width="3"/>
+  </g>
+  <rect x="120" y="112" width="880" height="3" rx="1.5" fill="url(#line)" opacity="0.9"/>
+  <text x="120" y="196" font-family="'Inter','SF Pro Display','Segoe UI',system-ui,Arial,sans-serif" font-size="80" font-weight="800" fill="url(#title)" filter="url(#soft)">FreeCoder MediKit</text>
+  <text x="124" y="246" font-family="'Inter','SF Pro Display','Segoe UI',system-ui,Arial,sans-serif" font-size="27" font-weight="500" fill="#9fb0c9">A curated, reproducible AI toolkit — LLM gateway · local router · opencode</text>
   <g font-family="'Inter','Segoe UI',system-ui,Arial,sans-serif" font-size="20" font-weight="600">
-    <rect x="124" y="276" width="176" height="46" rx="23" fill="#22d3ee" fill-opacity="0.12" stroke="#22d3ee" stroke-opacity="0.5"/>
-    <text x="212" y="306" text-anchor="middle" fill="#67e8f9">LLM Gateway</text>
-    <rect x="316" y="276" width="176" height="46" rx="23" fill="#8b5cf6" fill-opacity="0.12" stroke="#8b5cf6" stroke-opacity="0.5"/>
-    <text x="404" y="306" text-anchor="middle" fill="#c4b5fd">Local Router</text>
-    <rect x="508" y="276" width="176" height="46" rx="23" fill="#f0abfc" fill-opacity="0.12" stroke="#f0abfc" stroke-opacity="0.5"/>
-    <text x="596" y="306" text-anchor="middle" fill="#f5d0fe">opencode</text>
-    <rect x="700" y="276" width="196" height="46" rx="23" fill="#34d399" fill-opacity="0.12" stroke="#34d399" stroke-opacity="0.5"/>
-    <text x="798" y="306" text-anchor="middle" fill="#6ee7b7">Automation</text>
+    <rect x="124" y="292" width="182" height="48" rx="24" fill="#22d3ee" fill-opacity="0.1" stroke="#22d3ee" stroke-opacity="0.5"/>
+    <text x="215" y="323" text-anchor="middle" fill="#67e8f9">LLM Gateway</text>
+    <rect x="322" y="292" width="182" height="48" rx="24" fill="#8b5cf6" fill-opacity="0.1" stroke="#8b5cf6" stroke-opacity="0.5"/>
+    <text x="413" y="323" text-anchor="middle" fill="#c4b5fd">Local Router</text>
+    <rect x="520" y="292" width="156" height="48" rx="24" fill="#f0abfc" fill-opacity="0.1" stroke="#f0abfc" stroke-opacity="0.5"/>
+    <text x="598" y="323" text-anchor="middle" fill="#f5d0fe">opencode</text>
+    <rect x="692" y="292" width="196" height="48" rx="24" fill="#34d399" fill-opacity="0.1" stroke="#34d399" stroke-opacity="0.5"/>
+    <text x="790" y="323" text-anchor="middle" fill="#6ee7b7">Automation</text>
   </g>
-  <text x="124" y="372" font-family="'Inter','Segoe UI',system-ui,Arial,sans-serif" font-size="19" fill="#64748b">v1.0.0</text>
+  <text x="124" y="392" font-family="'Inter','Segoe UI',system-ui,Arial,sans-serif" font-size="19" fill="#64748b">v1.0.0 · secret-free · reproducible</text>
 </svg>
