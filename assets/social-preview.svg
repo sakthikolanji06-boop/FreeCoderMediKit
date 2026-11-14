@@ -1,0 +1,30 @@
+<svg width="1280" height="640" viewBox="0 0 1280 640" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="FreeCoder MediKit social preview">
+  <defs>
+    <linearGradient id="sbg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#050810"/><stop offset="0.5" stop-color="#0a1020"/><stop offset="1" stop-color="#0d1730"/>
+    </linearGradient>
+    <radialGradient id="sa1" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#22d3ee" stop-opacity="0.5"/><stop offset="1" stop-color="#22d3ee" stop-opacity="0"/></radialGradient>
+    <radialGradient id="sa2" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#8b5cf6" stop-opacity="0.5"/><stop offset="1" stop-color="#8b5cf6" stop-opacity="0"/></radialGradient>
+    <linearGradient id="st" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#67e8f9"/><stop offset="0.5" stop-color="#a78bfa"/><stop offset="1" stop-color="#f0abfc"/></linearGradient>
+    <pattern id="sgrid" width="44" height="44" patternUnits="userSpaceOnUse"><path d="M44 0H0V44" fill="none" stroke="#ffffff" stroke-opacity="0.05"/></pattern>
+    <filter id="sglow" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="7" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1280" height="640" fill="url(#sbg)"/>
+  <rect width="1280" height="640" fill="url(#sgrid)"/>
+  <circle cx="150" cy="120" r="230" fill="url(#sa1)"/>
+  <circle cx="1160" cy="560" r="260" fill="url(#sa2)"/>
+  <g transform="translate(980 180)" filter="url(#sglow)">
+    <rect width="150" height="150" rx="30" fill="#0b1220" fill-opacity="0.5" stroke="#22d3ee" stroke-opacity="0.6" stroke-width="3"/>
+    <rect x="62" y="20" width="26" height="110" rx="8" fill="#22d3ee"/>
+    <rect x="20" y="62" width="110" height="26" rx="8" fill="#22d3ee"/>
+  </g>
+  <text x="80" y="230" font-family="'Inter','SF Pro Display','Segoe UI',system-ui,Arial,sans-serif" font-size="86" font-weight="800" fill="url(#st)">FreeCoder</text>
+  <text x="80" y="322" font-family="'Inter','SF Pro Display','Segoe UI',system-ui,Arial,sans-serif" font-size="86" font-weight="800" fill="url(#st)">MediKit</text>
+  <text x="84" y="392" font-family="'Inter','Segoe UI',system-ui,Arial,sans-serif" font-size="30" font-weight="500" fill="#9fb0c9">Run a full LLM stack in minutes.</text>
+  <g font-family="'Inter','Segoe UI',system-ui,Arial,sans-serif" font-size="22" font-weight="600">
+    <rect x="84" y="432" width="190" height="50" rx="25" fill="#22d3ee" fill-opacity="0.1" stroke="#22d3ee" stroke-opacity="0.5"/><text x="179" y="464" text-anchor="middle" fill="#67e8f9">LLM Gateway</text>
+    <rect x="290" y="432" width="190" height="50" rx="25" fill="#8b5cf6" fill-opacity="0.1" stroke="#8b5cf6" stroke-opacity="0.5"/><text x="385" y="464" text-anchor="middle" fill="#c4b5fd">Local Router</text>
+    <rect x="496" y="432" width="170" height="50" rx="25" fill="#f0abfc" fill-opacity="0.1" stroke="#f0abfc" stroke-opacity="0.5"/><text x="581" y="464" text-anchor="middle" fill="#f5d0fe">opencode</text>
+  </g>
+  <text x="84" y="560" font-family="'Inter','Segoe UI',system-ui,Arial,sans-serif" font-size="24" fill="#64748b">github.com/sakthikolanji06-boop/FreeCoderMediKit</text>
+</svg>
