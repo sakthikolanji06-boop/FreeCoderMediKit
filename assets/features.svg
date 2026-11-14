@@ -1,0 +1,77 @@
+<svg width="1600" height="600" viewBox="0 0 1600 600" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Features">
+  <defs>
+    <linearGradient id="fbg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#050810"/><stop offset="1" stop-color="#0d1730"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.07"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0.02"/>
+    </linearGradient>
+    <linearGradient id="c1" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#22d3ee"/><stop offset="1" stop-color="#0ea5e9"/></linearGradient>
+    <linearGradient id="c2" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#8b5cf6"/><stop offset="1" stop-color="#6366f1"/></linearGradient>
+    <linearGradient id="c3" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#f0abfc"/><stop offset="1" stop-color="#ec4899"/></linearGradient>
+    <linearGradient id="c4" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#34d399"/><stop offset="1" stop-color="#10b981"/></linearGradient>
+    <linearGradient id="c5" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fbbf24"/><stop offset="1" stop-color="#f59e0b"/></linearGradient>
+    <linearGradient id="c6" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#f87171"/><stop offset="1" stop-color="#ef4444"/></linearGradient>
+    <filter id="fglow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="1600" height="600" fill="url(#fbg)"/>
+  <g font-family="'Inter','Segoe UI',system-ui,Arial,sans-serif">
+    <g transform="translate(60 60)">
+      <rect width="472" height="220" rx="24" fill="url(#card)" stroke="#ffffff" stroke-opacity="0.12"/>
+      <g filter="url(#fglow)" stroke="url(#c1)" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M40 70 h24 M52 58 v24" /><rect x="40" y="110" width="60" height="42" rx="8"/><path d="M52 110 v-10 a18 18 0 0 1 36 0 v10"/>
+      </g>
+      <text x="130" y="92" font-size="28" font-weight="700" fill="#e2e8f0">One API surface</text>
+      <text x="130" y="128" font-size="19" fill="#94a3b8">OpenAI and Anthropic compatible</text>
+      <text x="130" y="156" font-size="19" fill="#94a3b8">behind a single endpoint.</text>
+    </g>
+    <g transform="translate(564 60)">
+      <rect width="472" height="220" rx="24" fill="url(#card)" stroke="#ffffff" stroke-opacity="0.12"/>
+      <g filter="url(#fglow)" stroke="url(#c2)" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="70" cy="131" r="26"/><path d="M70 105 V88 M70 174 v-17 M44 131 H27 M113 131 h-17"/>
+      </g>
+      <text x="130" y="92" font-size="28" font-weight="700" fill="#e2e8f0">Provider-agnostic</text>
+      <text x="130" y="128" font-size="19" fill="#94a3b8">Route to any model and swap</text>
+      <text x="130" y="156" font-size="19" fill="#94a3b8">providers without rewrites.</text>
+    </g>
+    <g transform="translate(1068 60)">
+      <rect width="472" height="220" rx="24" fill="url(#card)" stroke="#ffffff" stroke-opacity="0.12"/>
+      <g filter="url(#fglow)" stroke="url(#c3)" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="30" y="100" width="80" height="66" rx="10"/><path d="M30 100 L70 76 L110 100"/><path d="M70 76 v90 M30 100 h80"/>
+      </g>
+      <text x="130" y="92" font-size="28" font-weight="700" fill="#e2e8f0">Batteries included</text>
+      <text x="130" y="128" font-size="19" fill="#94a3b8">Gateway, router, launcher scripts</text>
+      <text x="130" y="156" font-size="19" fill="#94a3b8">and docs in one bundle.</text>
+    </g>
+    <g transform="translate(60 310)">
+      <rect width="472" height="220" rx="24" fill="url(#card)" stroke="#ffffff" stroke-opacity="0.12"/>
+      <g filter="url(#fglow)" stroke="url(#c4)" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M70 90 l28 14 v28 c0 24 -14 38 -28 46 c-14 -8 -28 -22 -28 -46 v-28 z"/><path d="M58 134 l10 10 l20 -22"/>
+      </g>
+      <text x="130" y="92" font-size="28" font-weight="700" fill="#e2e8f0">Secret-free design</text>
+      <text x="130" y="128" font-size="19" fill="#94a3b8">No keys, databases, or logs</text>
+      <text x="130" y="156" font-size="19" fill="#94a3b8">ever shipped in the bundle.</text>
+    </g>
+    <g transform="translate(564 310)">
+      <rect width="472" height="220" rx="24" fill="url(#card)" stroke="#ffffff" stroke-opacity="0.12"/>
+      <g filter="url(#fglow)" stroke="url(#c5)" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M84 88 L44 138 h30 l-10 40 l42 -54 h-30 z"/>
+      </g>
+      <text x="130" y="92" font-size="28" font-weight="700" fill="#e2e8f0">Minutes, not weekends</text>
+      <text x="130" y="128" font-size="19" fill="#94a3b8">Copy the example configs,</text>
+      <text x="130" y="156" font-size="19" fill="#94a3b8">add a key, and run.</text>
+    </g>
+    <g transform="translate(1068 310)">
+      <rect width="472" height="220" rx="24" fill="url(#card)" stroke="#ffffff" stroke-opacity="0.12"/>
+      <g filter="url(#fglow)" stroke="url(#c6)" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="34" y="94" width="72" height="56" rx="8"/><path d="M34 110 h72 M50 94 v56 M34 124 l-8 26 M106 124 l8 26"/>
+      </g>
+      <text x="130" y="92" font-size="28" font-weight="700" fill="#e2e8f0">Reproducible</text>
+      <text x="130" y="128" font-size="19" fill="#94a3b8">Same stack, same steps,</text>
+      <text x="130" y="156" font-size="19" fill="#94a3b8">every machine.</text>
+    </g>
+  </g>
+</svg>
