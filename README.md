@@ -1,6 +1,6 @@
 <div align="center">
 
-# Sakthi AI Kit
+# MozhiKit
 
 **A curated, reproducible bundle of the AI tooling I run locally for LLM apps, agents, routing, and automation.**
 
