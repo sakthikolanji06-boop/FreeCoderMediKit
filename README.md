@@ -80,6 +80,26 @@ export ANTHROPIC_BASE_URL=http://127.0.0.1:20128/v1
 export ANTHROPIC_MODEL=claude-sonnet-5
 ```
 
+## Why this vs. wiring it yourself
+
+| | Manual setup | FreeCoder MediKit |
+|---|---|---|
+| Provider switching | Rewrite client code | Change one env var |
+| API compatibility | Per-tool | OpenAI + Anthropic in one |
+| Secrets handling | Scattered | `.example` templates only |
+| Reproducibility | Tribal knowledge | Documented, pinned bundle |
+| Time to first request | Hours | Minutes |
+
+## FAQ
+
+**Do I need API keys?** Yes — but they're yours, added locally from `.example` files. None ship in the repo.
+
+**Is it free?** The bundle is free to use. Third-party components keep their licenses (GPL-3.0 / MIT).
+
+**Does it phone home?** No. Everything runs on your machine.
+
+**Windows?** Works via WSL today; native parity is on the roadmap.
+
 ## Documentation
 
 | Guide | Description |
