@@ -1,0 +1,52 @@
+<svg width="1600" height="420" viewBox="0 0 1600 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="FreeCoder MediKit">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#070b16"/>
+      <stop offset="0.55" stop-color="#0d1426"/>
+      <stop offset="1" stop-color="#111a33"/>
+    </linearGradient>
+    <radialGradient id="glow1" cx="0.12" cy="0.18" r="0.55">
+      <stop offset="0" stop-color="#22d3ee" stop-opacity="0.38"/>
+      <stop offset="1" stop-color="#22d3ee" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow2" cx="0.88" cy="0.85" r="0.55">
+      <stop offset="0" stop-color="#8b5cf6" stop-opacity="0.38"/>
+      <stop offset="1" stop-color="#8b5cf6" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="title" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#67e8f9"/>
+      <stop offset="0.5" stop-color="#a78bfa"/>
+      <stop offset="1" stop-color="#f0abfc"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#ffffff" stroke-opacity="0.045"/>
+    </pattern>
+  </defs>
+  <rect width="1600" height="420" fill="url(#bg)"/>
+  <rect width="1600" height="420" fill="url(#grid)"/>
+  <rect width="1600" height="420" fill="url(#glow1)"/>
+  <rect width="1600" height="420" fill="url(#glow2)"/>
+  <g transform="translate(1290 120)" opacity="0.9">
+    <rect x="0" y="0" width="180" height="180" rx="34" fill="none" stroke="#22d3ee" stroke-opacity="0.55" stroke-width="3"/>
+    <rect x="74" y="24" width="32" height="132" rx="10" fill="#22d3ee" fill-opacity="0.9"/>
+    <rect x="24" y="74" width="132" height="32" rx="10" fill="#22d3ee" fill-opacity="0.9"/>
+    <circle cx="0" cy="0" r="5" fill="#a78bfa"/>
+    <circle cx="180" cy="0" r="5" fill="#a78bfa"/>
+    <circle cx="0" cy="180" r="5" fill="#a78bfa"/>
+    <circle cx="180" cy="180" r="5" fill="#a78bfa"/>
+    <path d="M-40 40 H-18 M-40 140 H-18 M198 40 H220 M198 140 H220" stroke="#a78bfa" stroke-opacity="0.55" stroke-width="3"/>
+  </g>
+  <text x="120" y="176" font-family="'Inter','SF Pro Display','Segoe UI',system-ui,Arial,sans-serif" font-size="78" font-weight="800" fill="url(#title)">FreeCoder MediKit</text>
+  <text x="124" y="228" font-family="'Inter','SF Pro Display','Segoe UI',system-ui,Arial,sans-serif" font-size="27" font-weight="500" fill="#94a3b8">A curated, reproducible AI toolkit — LLM gateway · local router · opencode</text>
+  <g font-family="'Inter','Segoe UI',system-ui,Arial,sans-serif" font-size="20" font-weight="600">
+    <rect x="124" y="276" width="176" height="46" rx="23" fill="#22d3ee" fill-opacity="0.12" stroke="#22d3ee" stroke-opacity="0.5"/>
+    <text x="212" y="306" text-anchor="middle" fill="#67e8f9">LLM Gateway</text>
+    <rect x="316" y="276" width="176" height="46" rx="23" fill="#8b5cf6" fill-opacity="0.12" stroke="#8b5cf6" stroke-opacity="0.5"/>
+    <text x="404" y="306" text-anchor="middle" fill="#c4b5fd">Local Router</text>
+    <rect x="508" y="276" width="176" height="46" rx="23" fill="#f0abfc" fill-opacity="0.12" stroke="#f0abfc" stroke-opacity="0.5"/>
+    <text x="596" y="306" text-anchor="middle" fill="#f5d0fe">opencode</text>
+    <rect x="700" y="276" width="196" height="46" rx="23" fill="#34d399" fill-opacity="0.12" stroke="#34d399" stroke-opacity="0.5"/>
+    <text x="798" y="306" text-anchor="middle" fill="#6ee7b7">Automation</text>
+  </g>
+  <text x="124" y="372" font-family="'Inter','Segoe UI',system-ui,Arial,sans-serif" font-size="19" fill="#64748b">v1.0.0</text>
+</svg>
