@@ -1,0 +1,77 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+MODE="${1:-launch}"
+LOG_AI="/home/sakthivel/AIClient2API/logs/start-claude-local.log"
+LOG_ROUTER="/home/sakthivel/.9router/9router-desktop.log"
+PORT_AI=3000
+PORT_ROUTER=20128
+
+is_listening() {
+  ss -ltn "( sport = :$1 )" | grep -q 'LISTEN'
+}
+
+start_aiclient() {
+  if is_listening "$PORT_AI"; then
+    return 0
+  fi
+  mkdir -p /home/sakthivel/AIClient2API/logs
+  cd /home/sakthivel/AIClient2API
+  setsid nohup npm start >"$LOG_AI" 2>&1 </dev/null &
+}
+
+start_9router() {
+  if is_listening "$PORT_ROUTER"; then
+    return 0
+  fi
+  cd /home/sakthivel/9router
+  set -a
+  . /home/sakthivel/9router/.env
+  set +a
+  setsid nohup npx next dev --webpack --port "$PORT_ROUTER" >"$LOG_ROUTER" 2>&1 </dev/null &
+}
+
+wait_for_http() {
+  local url="$1"
+  local attempts="${2:-45}"
+  local code
+  for _ in $(seq 1 "$attempts"); do
+    code="$(curl -s -o /dev/null -w '%{http_code}' "$url" || true)"
+    if [ "$code" = "200" ] || [ "$code" = "204" ] || [ "$code" = "401" ]; then
+      return 0
+    fi
+    sleep 2
+  done
+  return 1
+}
+
+start_services() {
+  start_aiclient
+  start_9router
+  wait_for_http "http://127.0.0.1:$PORT_AI/health" 60
+  wait_for_http "http://127.0.0.1:$PORT_ROUTER/api/health" 90
+}
+
+launch_claude_desktop() {
+  setsid nohup claude-desktop >/dev/null 2>&1 </dev/null &
+}
+
+case "$MODE" in
+  services)
+    start_services
+    ;;
+  check)
+    is_listening "$PORT_AI" && echo "AIClient2API: listening on $PORT_AI" || echo "AIClient2API: not listening"
+    is_listening "$PORT_ROUTER" && echo "9router: listening on $PORT_ROUTER" || echo "9router: not listening"
+    curl -s -o /dev/null -w 'AIClient2API /health: %{http_code}\n' "http://127.0.0.1:$PORT_AI/health" || true
+    curl -s -o /dev/null -w '9router /api/health: %{http_code}\n' "http://127.0.0.1:$PORT_ROUTER/api/health" || true
+    ;;
+  launch)
+    start_services
+    launch_claude_desktop
+    ;;
+  *)
+    echo "Usage: start-claude-local [launch|services|check]" >&2
+    exit 2
+    ;;
+esac
